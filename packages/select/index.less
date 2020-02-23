@@ -1,0 +1,26 @@
+@scrollHeight: 520px;
+.x-scrollbar-enter-active,.x-scrollbar-entered {
+  background-color: rgba(0,0,0,0.3);
+  .x-scroll-box-container {
+    bottom: 0;
+  }
+}
+
+.x-scrollbar-exit-active,.x-scrollbar-exited {
+  background-color: transparent;
+  .x-scroll-box-container {
+    bottom: -@scrollHeight;
+  }
+}
+
+.x-scroll-box-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: -@scrollHeight;
+  transition: bottom .3s ease;
+  background-color: #fff;
+  height: @scrollHeight;
+  width: 100%;
+  z-index: 2020;
+}

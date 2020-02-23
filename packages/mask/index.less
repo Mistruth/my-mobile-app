@@ -1,0 +1,26 @@
+@import '../style/var.less';
+@import '../style/func.less';
+
+@defaultBg: rgba(0,0,0,.2);
+
+.x-mask-container {
+  position: fixed;
+  height: 100vh;
+  background-color: transparent;
+  width: 100%;
+  top:0;
+  left: 0;
+  z-index: 2019;
+  transition: background-color .3s ease-in-out;
+  .x-mask-tips {
+    font-size: @smallFontSize;
+    color: @color-text-default;
+    .absolute-center();
+  }
+  &.mask-enter-active {
+    background-color: rgba(0,0,0,.4);
+  }
+  &.mask-entered {
+    background-color: rgba(0,0,0,.4);
+  }
+}

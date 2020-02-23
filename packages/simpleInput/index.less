@@ -1,0 +1,36 @@
+@import '../style/var.less';
+@import '../style/func.less';
+
+@item-height: 112px;
+.x-input-item-container {
+  font-size: 32px;
+  padding-left: 32px;
+  .x-input-item_border_bottom {
+    display: flex;
+    align-items: center;
+    height: @item-height;
+    // border-bottom: 1PX solid #eee;
+    .x-mobile-border-bottom();
+  }
+  .x-input-item-key {
+    width: 192px;
+  }
+  .x-input-item-value {
+    box-sizing: border-box;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    max-height: @item-height;
+    height: @item-height;
+    margin-right: 30px;
+    &.placeholder {
+      color: #aaa;
+    }
+    overflow: hidden;
+    .inner-value {
+      line-height: @item-height;
+      height: @item-height;
+      min-width: 1000PX;
+    }
+  }
+}
