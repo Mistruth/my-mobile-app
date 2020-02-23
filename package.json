@@ -73,7 +73,7 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
     "serve": "node server/app.js",
-    "watch-server": "nodemon --watch 'server/***/*' -e ts,tsx --exec 'ts-node' --project ./tsconfig.server.json  ./server/app.ts"
+    "watch-server": "nodemon --watch 'server/***/*' -e ts,tsx --exec ts-node --project ./tsconfig.server.json  ./server/app.ts"
   },
   "eslintConfig": {
     "extends": "react-app"
