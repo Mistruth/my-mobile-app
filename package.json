@@ -72,7 +72,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "serve": "node server/app.js",
+    "server": "webpack server/scripts/webpack.server.js",
     "watch-server": "nodemon --watch 'server/***/*' -e ts,tsx --exec ts-node --project ./tsconfig.server.json  ./server/app.ts"
   },
   "eslintConfig": {
@@ -162,12 +162,14 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.12.4",
     "eslint-plugin-standard": "^4.0.0",
+    "ignore-loader": "^0.1.2",
     "less": "^3.9.0",
     "less-loader": "^5.0.0",
     "nodemon": "^1.19.2",
     "postcss-loader": "^3.0.0",
     "postcss-px2rem": "^0.3.0",
     "ts-node": "^8.3.0",
-    "typescript": "^3.6.3"
+    "typescript": "^3.6.3",
+    "webpack-cli": "^3.3.11"
   }
 }
